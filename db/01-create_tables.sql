@@ -9,9 +9,9 @@ CREATE TABLE authors(
 );
 
 CREATE TABLE jokes(
-   id SERIAL PRIMARY KEY,
-   question TEXT NOT NULL,
-   answer TEXT,
-   rating FLOAT NOT NULL,
-   author_id INT REFERENCES authors(id) ON DELETE CASCADE
+    id SERIAL PRIMARY KEY,
+    question TEXT NOT NULL,
+    answer TEXT,
+    rating FLOAT NOT NULL,
+    author_id INT REFERENCES authors(id) ON DELETE CASCADE
 );
