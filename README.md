@@ -16,3 +16,7 @@ Now we have the following:
  public | jokes   | table | tommytran
 
  Instead of typing one sql command at a time, we can type them in 03-ops and import that file like we did above
+
+ A table is just parsed text. You cant work with it in Javascript.
+
+ 

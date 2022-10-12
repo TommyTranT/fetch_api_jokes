@@ -42,10 +42,34 @@
 --   3 | What do you call a belt made out of watches?                    | A waist of time.                |      5 |         3 |  3 | Mike   | t     | A student in march01
 --   5 | You know you should knock on your fridge door before opening it | There might by a salad dressing |      5 |         4 |  4 | Grigor | t     | A student in march29
 
+
+-- Show author_id if they are in the march cohort
+-- SELECT id FROM authors WHERE description LIKE '%march%';
+--  id 
+-- ----
+--   2
+--   3
+--   4
+--   5
+
+
 -- Now show only the jokes by using the authors.id 
-SELECT * FROM jokes WHERE author_id IN (2,3,4,5);
+-- SELECT * FROM jokes WHERE author_id IN (2,3,4,5);
+
+-- Or a nested version using both of the queries:
+-- First, get me the id of the students in the march cohort (in the bracket)
+-- Second, show me those jokes
+
+-- SELECT * 
+-- FROM jokes
+-- WHERE
+--   author_id IN (SELECT id FROM authors WHERE description LIKE '%march%')
+-- ;
 --  id |                            question                             |             answer              | rating | author_id 
 -- ----+-----------------------------------------------------------------+---------------------------------+--------+-----------
 --   2 | How is a bouncer at a club like a dish soap?                    | They both DETER GENTS           |      5 |         2
 --   3 | What do you call a belt made out of watches?                    | A waist of time.                |      5 |         3
 --   5 | You know you should knock on your fridge door before opening it | There might by a salad dressing |      5 |         4
+
+-- Nested: insert or update data for a specifit data.
+
