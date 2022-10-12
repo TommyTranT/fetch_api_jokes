@@ -42,4 +42,6 @@ PostgresSQL is the server deep in our computer.
  - npm init -y
  - npm install pg
  - Continue in index.js
- 
+
+ # Functions
+ When we made show all jokes function, we assume that the sample data structure will be the same 
